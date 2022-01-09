@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&family=The+Nautigal&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cinza: #ccc;
+    --preto: #666;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+header {
+    background-color: rgb(115, 36, 206);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    padding-bottom: 40px;
+    font-family: 'The Nautigal', cursive;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+h2,
+p {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+p {
+    word-wrap: break-word;
+    max-width: 250px;
+}
+
+a {
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--preto);
+    padding: 5px 10px;
+    border: solid 1px var(--cinza);
+    box-shadow: 2px 2px 5px var(--cinza);
+    border-radius: 10px;
+}
+
+a:hover {
+    filter: brightness(80%);
+}
+
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    color: var(--preto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px 25px 20px 25px;
+
+    border: 1px solid var(--cinza);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px var(--cinza);
+    width: 300px;
+    min-width: 200px;
+}
+
+@media(min-width:600px) {
+    header {
+        font-size: 2.5rem;
+    }
+}
