@@ -2,6 +2,7 @@ renderCupons();
 async function getCupons() {
     let response = await fetch('http://sandbox-api.lomadee.com/v2/1641670432148a9d1bff9/coupon/_all?sourceId=37341291');
     let responseJson = await response.json();
+    console.log(responseJson);
     let cupons = responseJson.coupons;
     return cupons;
 }
@@ -20,6 +21,10 @@ async function renderCupons() {
         let cardImg = document.createElement('img');
         cardImg.src = cupom.store.image;
 
+        let cardValidade = document.createElement('div');
+        cardValidade.className ="validade";
+        cardValidade.textContent = "Validade: "+ cupom.vigency;
+
         let cardLink = document.createElement('a');
         cardLink.textContent = 'Pegar Cupom';
         cardLink.href = cupom.link;
@@ -27,6 +32,7 @@ async function renderCupons() {
 
         card.append(cardImg);
         card.append(cardDescricao);
+        card.append(cardValidade);
         card.append(cardLink);
         container.append(card);
 
